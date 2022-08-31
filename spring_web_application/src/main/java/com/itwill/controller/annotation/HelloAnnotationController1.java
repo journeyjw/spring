@@ -6,13 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HelloAnnotationController1 {
+public class HelloAnnotationController1{
 	public HelloAnnotationController1() {
-		System.out.println("### HelloAnnotationController1() 생성자 호출");
+		System.out.println("### HelloAnnotationController1()생성자호출");
 	}
 	@RequestMapping("/hello1.do")
 	public String hello1(HttpServletRequest request) {
-		System.out.println("### HelloAnnotationController1.hello1()메쏘드호출");
+		System.out.println("HelloAnnotationController1 메소드호출");
 		request.setAttribute("msg", "HelloAnnotationController1 안녕");
 		return "forward:/WEB-INF/views/hello1.jsp";
 	}

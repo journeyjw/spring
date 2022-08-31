@@ -42,7 +42,9 @@
 	<li>변수2(EL Bean):</li>
 	<li>
 		변수1(SPEL String Wrapper):
-		
+		<s:eval expression="price2"></s:eval>
+		<s:eval expression="name2"></s:eval>
+		<s:eval expression="married2"></s:eval>
 		
 	</li>
 	<li>

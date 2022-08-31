@@ -14,53 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class SpringModelController {
 	@RequestMapping("/model_request.do")
 	public String request(HttpServletRequest request) {
-		request.setAttribute("req", "리퀘스트데이타");
+		request.setAttribute("req", "리퀘스트데이터");
 		return "forward:/WEB-INF/views/spring_model.jsp";
 	}
-	@RequestMapping("/model_model.do")
 	public String model(Model model) {
-		model.addAttribute("model", "모델데이타");
-		/*
-		request.setAttribute("model", "모델데이타");
-		 */
-		return "forward:/WEB-INF/views/spring_model.jsp";
-	}
-	@RequestMapping("/model_map.do")
-	public String model(Map map) {
-		map.put("map", "맵데이타");
-		/*
-		request.setAttribute("map", "맵데이타");
-		 */
-		return "forward:/WEB-INF/views/spring_model.jsp";
-	}
-	@RequestMapping("/model_modelmap.do")
-	public String modelmap(ModelMap modelMap) {
-		modelMap.put("modelmap", "모델맵데이타");
-		/*
-		request.setAttribute("modelmap", "모델맵데이타");
-		 */
-		return "forward:/WEB-INF/views/spring_model.jsp";
-	}
-	
-	@RequestMapping("/model_modelandview.do")
-	public ModelAndView modelandview() {
-		ModelAndView modelAndView=new ModelAndView();
-		modelAndView.addObject("modelandview", "모델앤뷰데이타");
-		/*
-		request.setAttribute("modelandview", "모델앤뷰데이타");
-		 */
-		modelAndView.setViewName("forward:/WEB-INF/views/spring_model.jsp");
-		return modelAndView;
-	}
-	@RequestMapping("/model_all.do")
-	public String model_all(HttpServletRequest request,
-							Model model,
-							Map map,
-							ModelMap modelMap) {
-		request.setAttribute("req", "리퀘스트데이타");
-		model.addAttribute("model","모델데이타");
-		map.put("map", "맵데이타");
-		modelMap.addAttribute("modelmap","모델맵데이타");
+		model.addAttribute("model","모델데이터");
 		return "forward:/WEB-INF/views/spring_model.jsp";
 	}
 	
